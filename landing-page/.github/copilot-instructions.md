@@ -1,10 +1,12 @@
-# AgentsPalace Landing Page - Copilot Instructions
+# Agent Palace Landing Page - Copilot Instructions
 
 <!-- Use this file to provide workspace-specific custom instructions to Copilot. For more details, visit https://code.visualstudio.com/docs/copilot/copilot-customization#_use-a-githubcopilotinstructionsmd-file -->
 
 ## Project Overview
 
-Bu proje, AgentsPalace AI Agent Orchestration Hub için bir Next.js landing page'idir. Blade Runner 2049 estetiği ile siber-fütüristik tasarım benimsenmiştir.
+Bu proje, Agent Palace AI Agent Orchestration Hub için bir Next.js landing page'idir. Blade Runner 2049 estetiği ile siber-fütüristik tasarım benimsenmiştir.
+
+**Not:** Landing page geliştirilirken, Agent Palace ana platformu ve modüllerinin mimarisinde de aktif geliştirme devam etmektedir. Bu nedenle landing page; platformun nihai haliyle tam uyumlu olmalı, aynı zamanda ürünün gelişimiyle paralel olarak güncellenmeye açık tutulmalıdır.
 
 ## Design System
 
@@ -30,7 +32,7 @@ Bu proje, AgentsPalace AI Agent Orchestration Hub için bir Next.js landing page
 1. **Hero** - Ana giriş, logo, CTA butonları
 2. **ProblemSolution** - Problem/çözüm karşılaştırması
 3. **PlatformFeatures** - Teknik özellikler
-4. **ModuleGallery** - AgentsPalace modülleri
+4. **ModuleGallery** - Agent Palace modülleri
 5. **UseCases** - Kullanım senaryoları
 6. **CTAInvestor** - Yatırımcı/geliştirici/kullanıcı CTA'ları
 7. **Footer** - İletişim ve linkler
@@ -50,12 +52,16 @@ Bu proje, AgentsPalace AI Agent Orchestration Hub için bir Next.js landing page
 - Vizyoner ve güçlü
 - B2B enterprise odaklı
 
+**Ek:** Landing page, ön çalışma ve fikir yürütme aşamasında görsel olarak esnek ve yaratıcı bir yaklaşım sunmalıdır. Platformun gelişim sürecini yansıtan dinamik içerikler ve keşif odaklı öğeler barındırabilir.
+
 ### Key Messages
 - "Orchestrate the Future"
 - "Where Agents Come Alive"
 - AI agent orchestration hub
 - Microservice architecture
 - Multi-language support
+
+**Ek:** Görsellik, geliştirici, yatırımcı ve pazarlama/reklam ekibi gibi farklı paydaşlara hitap edecek şekilde efektif kullanılmalıdır. Tasarımda; teknik yeterlilik, yenilikçilik ve pazarlama açısından güçlü bir ilk izlenim sağlanmasına özen gösterilmeli, görsel öğeler amaca uygun seçilmelidir.
 
 ## Technical Specifications
 
@@ -78,4 +84,4 @@ Bu proje, AgentsPalace AI Agent Orchestration Hub için bir Next.js landing page
 - ESLint rules compliance
 - Accessibility considerations (WCAG)
 
-Bu proje README.md dosyasındaki AgentsPalace vizyonu ve teknik detayları ile tam uyumlu olmalıdır.
+Bu proje README.md dosyasındaki Agent Palace vizyonu ve teknik detayları ile tam uyumlu olmalıdır.

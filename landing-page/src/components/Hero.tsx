@@ -40,9 +40,8 @@ export default function Hero() {
                   <Cpu className="w-8 h-8 text-cyber-green" />
                 </motion.div>
               </div>
-            </div>
-            <h1 className="text-6xl md:text-8xl font-bold font-orbitron drop-shadow-neon bg-gradient-to-r from-electric-purple to-cyber-mint bg-clip-text text-transparent">
-              AgentsPalace
+            </div>            <h1 className="text-6xl md:text-8xl font-bold font-orbitron drop-shadow-neon bg-gradient-to-r from-electric-purple to-cyber-mint bg-clip-text text-transparent">
+              Agent Palace
             </h1>
           </motion.div>
 

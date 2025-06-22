@@ -1,6 +1,6 @@
 # Development History & Production-Ready Sayfası Güncelleme Talimatları
 
-## AgentsPalace SDLC & Development Doc Standards
+## Agent Palace SDLC & Development Doc Standards
 
 ### 1. Proposal (Öneri) ve Onay Süreci
 

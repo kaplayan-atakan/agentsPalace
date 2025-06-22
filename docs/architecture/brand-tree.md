@@ -1,14 +1,13 @@
 # Brand/Module Tree (Marka Ağacı)
 
-AgentsPalace platformunun marka hiyerarşisi ve modül yapısı.
+Agent Palace platformunun marka hiyerarşisi ve modül yapısı.
 
 ## Brand Hierarchy
 
 ```mermaid
-graph TD
-    EA[everything agent<br/>🏢 Ana Şirket]
+graph TD    EA[everything agent<br/>🏢 Ana Şirket]
     
-    EA --> PALACE[AgentsPalace<br/>🏰 Ana Platform]
+    EA --> PALACE[Agent Palace<br/>🏰 Ana Platform]
     
     PALACE --> CORE[AgentsCore<br/>⚙️ Temel Altyapı]
     PALACE --> FLOW[AgentsFlow<br/>🔄 İş Akışı Motoru]

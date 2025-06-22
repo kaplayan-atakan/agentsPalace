@@ -14,11 +14,11 @@ const orbitron = Orbitron({
 
 export const metadata: Metadata = {
   title: {
-    default: "AgentsPalace - AI Agent Orchestration Hub",
-    template: "%s | AgentsPalace"
+    default: "Agent Palace - AI Agent Orchestration Hub",
+    template: "%s | Agent Palace"
   },
   description: "Deploy, coordinate, and scale autonomous agents across your stack — with one unified control plane. Where agents come alive.",
-  keywords: ["AI", "Agents", "Orchestration", "Microservices", "Automation", "Machine Learning", "AgentsPalace", "AI Platform", "Agent Management"],
+  keywords: ["AI", "Agents", "Orchestration", "Microservices", "Automation", "Machine Learning", "Agent Palace", "AI Platform", "Agent Management"],
   authors: [{ name: "everything agent" }],
   creator: "everything agent",
   publisher: "everything agent",
@@ -34,18 +34,18 @@ export const metadata: Metadata = {
     },
   },
   openGraph: {
-    title: "AgentsPalace - Orchestrate the Future",
+    title: "Agent Palace - Orchestrate the Future",
     description: "The AI Agent Orchestration Hub for modern enterprises. Microservice architecture, multi-language support, real-time monitoring.",
     type: "website",
-    siteName: "AgentsPalace",
+    siteName: "Agent Palace",
     locale: "tr_TR",
-    url: "https://agentspalace.com",
+    url: "https://agentpalace.com",
   },
   twitter: {
     card: "summary_large_image",
-    title: "AgentsPalace - Where Agents Come Alive",
+    title: "Agent Palace - Where Agents Come Alive",
     description: "Your Central Command for Autonomous Systems",
-    creator: "@agentspalace",
+    creator: "@agentpalace",
   },
 };
 

@@ -1,4 +1,4 @@
-# AgentsPalace - AI Agent Orchestration Platform
+# Agent Palace - AI Agent Orchestration Platform
 
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/agentspalace/agentspalace)
 [![Version](https://img.shields.io/badge/version-v0.3.0-blue)](https://github.com/agentspalace/agentspalace/releases)
@@ -7,7 +7,7 @@
 
 ## 🏰 Proje Vizyonu
 
-**AgentsPalace**, modern yapay zeka ve otonom sistemler çağında, dağıtık ve çok dilli (Node.js, .NET, Python, Go) microservice mimarisiyle geliştirilen, tüm agent'ların merkezi yönetimini sağlayan bir "AI Agent Orchestration Hub"dır. Platform; gerçek zamanlı akışlar, koşullu yönlendirme, gelişmiş hata yönetimi ve ölçeklenebilirlik vaat eden, yatırımcı, geliştirici ve ilk kullanıcıları için yüksek potansiyel barındıran bir inovasyon merkezidir.
+**Agent Palace**, modern yapay zeka ve otonom sistemler çağında, dağıtık ve çok dilli (Node.js, .NET, Python, Go) microservice mimarisiyle geliştirilen, tüm agent'ların merkezi yönetimini sağlayan bir "AI Agent Orchestration Hub"dır. Platform; gerçek zamanlı akışlar, koşullu yönlendirme, gelişmiş hata yönetimi ve ölçeklenebilirlik vaat eden, yatırımcı, geliştirici ve ilk kullanıcıları için yüksek potansiyel barındıran bir inovasyon merkezidir.
 
 ## 📋 SDLC & Dokümantasyon
 
@@ -30,6 +30,7 @@ Bu proje kapsamlı bir **Software Development Life Cycle (SDLC)** ve dokümantas
 - **[Architecture Decision Records (ADR)](docs/adr/)** - Teknik karar kayıtları
   - [Next.js Framework Selection](docs/adr/0001-nextjs-framework-selection.md)
   - [TailwindCSS + Framer Motion Stack](docs/adr/0002-tailwindcss-framer-motion-stack.md)
+  - [Brand Name Standardization](docs/adr/0003-brand-name-standardization.md)
 - **[Feature Proposals](proposals/)** - Yeni özellik önerileri
   - [Real-time Dashboard Implementation](proposals/2025-01-22-realtime-dashboard.md)
 
@@ -42,8 +43,8 @@ Bu proje kapsamlı bir **Software Development Life Cycle (SDLC)** ve dokümantas
 
 ## 🚀 Kapsam & Platform Modülleri
 
-- Ana Platform: **AgentsPalace**
-- Modüller: AgentsFlow, AgentsTask, AgentsOps, AgentsMap, AgentsBrain, AgentsCore, AgentsVoice (isteğe bağlı)
+- Ana Platform: **Agent Palace**
+- Modüller: Agent Palace Flow (AgentsFlow), Agent Palace Task (AgentsTask), Agent Palace Ops (AgentsOps), Agent Palace Map (AgentsMap), Agent Palace Brain (AgentsBrain), Agent Palace Core (AgentsCore), Agent Palace Voice (AgentsVoice) (isteğe bağlı)
 - Sub-modüller: Modüller altında, işlev ve ihtiyaca özel Node.js öncelikli, fakat .NET, Python ve Go tabanlı geliştirilebilen Docker microservisleri
 - Tek UI & Tek GitHub Reposu
 - Microservice Architecture, Kafka Message Bus, Docker tabanlı runtime, JSON/YAML flow config, merkezi konfigürasyon sistemi

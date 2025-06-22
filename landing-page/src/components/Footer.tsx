@@ -10,15 +10,14 @@ import {
   ArrowUp
 } from 'lucide-react';
 
-export default function Footer() {
-  const modules = [
-    { name: 'AgentsFlow', href: '#flow' },
-    { name: 'AgentsTask', href: '#task' },
-    { name: 'AgentsOps', href: '#ops' },
-    { name: 'AgentsMap', href: '#map' },
-    { name: 'AgentsBrain', href: '#brain' },
-    { name: 'AgentsCore', href: '#core' },
-    { name: 'AgentsVoice', href: '#voice' }
+export default function Footer() {  const modules = [
+    { name: 'Agent Palace Flow', href: '#flow' },
+    { name: 'Agent Palace Task', href: '#task' },
+    { name: 'Agent Palace Ops', href: '#ops' },
+    { name: 'Agent Palace Map', href: '#map' },
+    { name: 'Agent Palace Brain', href: '#brain' },
+    { name: 'Agent Palace Core', href: '#core' },
+    { name: 'Agent Palace Voice', href: '#voice' }
   ];
 
   const resources = [
@@ -69,9 +68,8 @@ export default function Footer() {
                       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
                       className="absolute -top-1 -right-1 w-4 h-4 bg-cyber-green rounded-full opacity-80"
                     ></motion.div>
-                  </div>
-                  <h3 className="text-2xl font-bold text-white font-orbitron">
-                    AgentsPalace
+                  </div>                  <h3 className="text-2xl font-bold text-white font-orbitron">
+                    Agent Palace
                   </h3>
                 </div>
                 <p className="text-gray-300 mb-6 leading-relaxed">
@@ -213,15 +211,14 @@ export default function Footer() {
         </motion.div>
 
         {/* Bottom Bar */}
-        <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
-          <motion.div
+        <div className="py-6 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">          <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.5 }}
             className="text-gray-400 text-sm"
           >
-            © 2025 everything agent. Tüm hakları saklıdır. AgentsPalace™
+            © 2025 everything agent. Tüm hakları saklıdır. Agent Palace™
           </motion.div>
 
           <div className="flex items-center gap-6">

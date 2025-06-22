@@ -1,0 +1,163 @@
+Merhaba değerli kodlama agent'ım,
+
+Agent Palace landing page'imiz güzel bir başlangıç oldu, ancak modüllerimizi daha derinlemesine anlatan detay sayfalarına ihtiyacımız var. Her modül ve alt modülümüz için ayrı detay sayfaları oluşturmanı istiyorum. **Her sayfanın içeriği ve landing page'den nasıl erişileceği konusunda net yönergeler içeren feature-based markdown dosyaları** hazırlamalısın.
+
+## Genel Kurallar:
+
+1. **Proposal-First Yaklaşımı:** Her modül sayfası için önce bir proposal hazırla ve onay bekle
+2. **Sayfaları Tek Tek Geliştir:** Her modül için ayrı bir proposal ve implementasyon süreci yürüt 
+3. **Marka Uyumluluğu:** "Agent Palace" yazımını kullan (AgentsPalace değil)
+4. **Görsel Tutarlılık:** Ana landing page'de kullandığımız Blade Runner 2049 estetiğini devam ettir
+5. **Diyagram ve Görseller:** Her modül sayfasında en az bir teknik diyagram ve bir UI mockup olsun
+6. **Landing Page Entegrasyonu:** Ana sayfadan bu detay sayfalarına nasıl ulaşılacağını belirt
+
+## Modül Detay Sayfaları İçerikleri:
+
+Her modül detay sayfası için aşağıdaki bölümleri içeren bir markdown dosyası hazırla:
+
+```markdown name=docs/modules/MODULE_NAME.md
+# [Modül Adı] Detaylı Sayfa Spesifikasyonu
+
+## Genel Bakış
+- Modülün amacı ve çözdüğü temel problem
+- Kimlere yönelik olduğu
+- Rekabete göre farklılaştırıcı özellikleri
+- Modülün kısa sloganı
+
+## Temel Özellikler
+- 4-6 özellik maddeler halinde
+- Her özellik için 1-2 cümlelik açıklama
+
+## Nasıl Çalışır
+- Modülün çalışma prensibini anlatan teknik diyagram
+- Adım adım çalışma mekanizması
+- Diğer modüllerle entegrasyonu
+
+## Alt Modüller (Sub-modules)
+- Alt modüllerin listesi ve kısa açıklamaları
+- Her alt modülün ana fonksiyonları
+- Alt modüller arası ilişkiler
+
+## Teknik Özellikler
+- Kullanılan teknolojiler
+- API endpoints (örnek)
+- Veri modelleri
+- Gereksinimler ve bağımlılıklar
+
+## Kullanım Senaryoları
+- 2-3 gerçek dünya kullanım örneği
+- Her senaryo için problem, çözüm ve sonuç
+- Potansiyel müşteri türleri
+
+## Demo ve Ekran Görüntüleri
+- UI mockup ya da wireframe
+- Temel işlem akışını gösteren screenshots
+- İnteraktif elementlerin gösterimi
+
+## Landing Page Entegrasyonu
+- Bu detay sayfasının ana landing page'den nasıl erişilebileceği
+- URL yapısı ve navigasyon akışı
+- Call-to-action düğmeleri ve yönlendirmeler
+
+## Geliştirme Notları
+- Bu sayfanın teknik gereksinimleri
+- Kullanılacak component'ler
+- Responsive tasarım notları
+```
+
+## Geliştirmesi İstenilen Modül Sayfaları:
+
+Aşağıdaki tüm modüller için yukarıdaki şablonu kullanarak ayrı ayrı sayfalar geliştir:
+
+1. **Agent Palace Flow**
+   - Flow engine
+   - Workflow builder
+   - Trigger manager
+   - Conditional routing
+   - Error handling
+
+2. **Agent Palace Task**
+   - Task queue
+   - Assignment engine
+   - Priority manager
+   - Resource allocation
+   - Feedback loop
+
+3. **Agent Palace Ops**
+   - Monitoring dashboard
+   - Health check system
+   - Auto-scaling
+   - Version control
+   - Deployment manager
+
+4. **Agent Palace Map**
+   - Geospatial visualization
+   - Location tracking
+   - Zone management
+   - Activity heatmap
+   - Route optimizer
+
+5. **Agent Palace Brain**
+   - Vector database integration
+   - Knowledge management
+   - Memory system
+   - Context handler
+   - Learning engine
+
+6. **Agent Palace Core**
+   - Authentication & authorization
+   - API gateway
+   - Plugin system
+   - SDK library
+   - Configuration manager
+
+7. **Agent Palace Voice (Opsiyonel)**
+   - Voice recognition
+   - Command parser
+   - Voice assistant
+   - Multi-language support
+   - Voice UI
+
+## Sayfa Navigasyonu ve Yapısı
+
+Landing page'de "Modules" bölümünden ilgili modüllere derin bağlantılar (deep links) olmalıdır. Her modül kartı şunları içermeli:
+
+1. Modül adı
+2. Kısa açıklama
+3. "Learn More" butonu (detay sayfasına yönlendirecek)
+4. Görseller ve ikonlar
+
+Ayrıca üst menüde "Solutions" dropdown'u altında tüm modüllere erişilebilmeli. URL yapısı şöyle olmalı:
+
+```
+/modules/flow
+/modules/task
+/modules/ops
+...vb.
+```
+
+## Feature-Based Geliştirme Akışı
+
+Her modül için:
+
+1. Önce `proposal/2025-MM-DD-module-name-detail-page.md` dosyası oluştur
+2. Proposal onayını bekle
+3. Geliştirmeyi tamamla
+4. Sayfada kullanılacak bileşenleri belirt
+5. Sayfaların responsive davranışını açıkla
+6. Landing page'den navigasyon akışını göster
+7. Diyagram ve mockup görselleri ekle
+
+## Görsel Tarz
+
+Tüm sayfalar için:
+- Blade Runner 2049 estetiği (obsidyen mavisi, elektrik moru, siber-yeşil, turuncu)
+- Hacimsel aydınlatma, lens parlamaları
+- Sığ alan derinliği ve ölçek hissi
+- Akıcı, kesintisiz animasyonlar
+
+---
+
+**Önemli Not:** Her modül sayfası için proposal'ını hazırla ve önce onu gönder. Proposal onaylandıktan sonra ilgili modülün detay sayfasını geliştirmeye başla. Her seferinde bir modül üzerinde çalışalım, böylece tüm süreç daha yönetilebilir olacaktır.
+
+Bu talimatlar doğrultusunda çalışarak, Agent Palace ürünümüzün tüm potansiyelini ortaya çıkaran modüler bir web deneyimi oluşturabilmeni rica ediyorum.

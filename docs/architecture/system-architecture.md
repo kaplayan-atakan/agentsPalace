@@ -1,12 +1,12 @@
 # System Architecture Diagram
 
-Bu diyagram, AgentsPalace platformunun temel bileşenlerini ve aralarındaki ilişkileri gösterir.
+Bu diyagram, Agent Palace platformunun temel bileşenlerini ve aralarındaki ilişkileri gösterir.
 
 ## Platform Overview
 
 ```mermaid
 flowchart TB
-    subgraph "AgentsPalace Platform"
+    subgraph "Agent Palace Platform"
         subgraph "Frontend Layer"
             LP[Landing Page<br/>Next.js + TailwindCSS]
             DA[Dashboard<br/>React Admin Panel]
