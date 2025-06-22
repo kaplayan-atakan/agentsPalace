@@ -1,4 +1,6 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 * {
   box-sizing: border-box;
@@ -57,5 +59,13 @@ a {
   
   .box-glow {
     box-shadow: 0 0 20px rgba(98, 54, 255, 0.3), 0 0 40px rgba(98, 54, 255, 0.2);
+  }
+  
+  .focus-visible-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-cyber-green focus-visible:ring-offset-2 focus-visible:ring-offset-obsidian-900;
+  }
+  
+  .accessibility-improved {
+    @apply text-gray-200;
   }
 }

@@ -12,7 +12,8 @@ import {
   Shield
 } from 'lucide-react';
 
-export default function PlatformFeatures() {  const features = [
+export default function PlatformFeatures() {  
+  const features = [
     {
       icon: Network,
       title: "Microservice Mimarisi",
@@ -76,17 +77,15 @@ export default function PlatformFeatures() {  const features = [
       color: "#39ff14",
       delay: 0.7
     }
-  ];
-
-  return (
-    <section className="py-24 relative overflow-hidden">
+  ];  return (
+    <section className="py-12 sm:py-16 md:py-24 relative overflow-hidden" aria-label="Platform özellikleri bölümü">
       {/* Background Elements */}
-      <div className="absolute inset-0">
+      <div className="absolute inset-0" aria-hidden="true">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-obsidian-800/50 to-transparent"></div>
         <div className="cyber-grid opacity-10 bg-cyber-grid bg-grid"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -95,12 +94,11 @@ export default function PlatformFeatures() {  const features = [
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-bold font-orbitron text-white mb-6">
+          <h2 className="text-4xl md:text-6xl font-bold font-orbitron text-white mb-6" id="platform-features">
             <span className="bg-gradient-to-r from-electric-purple to-cyber-green bg-clip-text text-transparent">
               Platform Özellikleri
             </span>
-          </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          </h2>          <p className="text-xl text-gray-200 max-w-3xl mx-auto">
             Modern microservice mimarisi ile güçlendirilmiş, enterprise-ready agent orchestration platformu
           </p>
         </motion.div>
@@ -184,24 +182,36 @@ export default function PlatformFeatures() {  const features = [
                 transition: { duration: 0.2 }
               }}
               className="group relative"
-            >
-              <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 h-full hover:border-white/30 transition-all duration-300 group-hover:shadow-glow">
-                {/* Icon */}                <div className="mb-4">
+            >              <div 
+                className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 h-full hover:border-white/30 transition-all duration-300 group-hover:shadow-glow"
+                role="region"
+                aria-labelledby={`feature-${feature.title.replace(/\s+/g, '-').toLowerCase()}`}
+              >
+                {/* Icon */}
+                <div className="mb-4">
                   <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-white/10 to-white/5 border border-white/20">
                     <feature.icon 
                       className={`w-6 h-6 ${feature.className}`}
+                      aria-hidden="true"
                     />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:drop-shadow-neon transition-all">
+                <h3 
+                  className="text-lg font-semibold text-white mb-3 group-hover:drop-shadow-neon transition-all"
+                  id={`feature-${feature.title.replace(/\s+/g, '-').toLowerCase()}`}
+                >
                   {feature.title}
-                </h3>
-                <p className="text-gray-300 text-sm leading-relaxed">
+                </h3>                <p className="text-gray-200 text-sm leading-relaxed">
                   {feature.description}
-                </p>                {/* Hover Effect */}
-                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-gradient-to-br from-current to-transparent"></div>
+                </p>
+                
+                {/* Hover Effect */}
+                <div 
+                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-gradient-to-br from-current to-transparent"
+                  aria-hidden="true"
+                ></div>
               </div>
             </motion.div>
           ))}

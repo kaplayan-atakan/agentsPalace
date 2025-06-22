@@ -97,14 +97,14 @@ export default function UseCases() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-24 relative overflow-hidden" aria-label="Kullanım senaryoları bölümü">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="cyber-grid opacity-5"></div>
         <div className="absolute inset-0 bg-gradient-to-r from-obsidian-900 via-obsidian-800 to-obsidian-900"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

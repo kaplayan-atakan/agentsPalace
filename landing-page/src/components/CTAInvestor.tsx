@@ -64,14 +64,14 @@ export default function CTAInvestor() {
   ];
 
   return (
-    <section className="py-24 relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-24 relative overflow-hidden" aria-label="Yatırımcı bilgilendirme bölümü">
       {/* Background */}
       <div className="absolute inset-0">
         <div className="animated-gradient opacity-20"></div>
         <div className="cyber-grid opacity-10"></div>
       </div>
 
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}

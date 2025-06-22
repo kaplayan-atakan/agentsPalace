@@ -48,7 +48,7 @@ export default function Footer() {
       {/* Background Pattern */}
       <div className="absolute inset-0 cyber-grid opacity-5"></div>
       
-      <div className="container mx-auto px-6 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 relative z-10">
         {/* Main Footer Content */}
         <div className="py-16">
           <div className="grid lg:grid-cols-4 md:grid-cols-2 gap-8">
