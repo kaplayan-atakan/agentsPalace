@@ -2,6 +2,24 @@
 
 Tüm önemli değişiklikler, yeni feature'lar ve bugfix'ler burada listelenir.
 
+## [v0.4.1] - 2025-06-22
+### Added
+- **Modül Detay Sayfaları** - Platformun modüllerini detaylı anlatan sayfalar
+  - Agent Palace Flow modül detay sayfası eklendi
+  - Teknik diyagramlar ve UI mockuplar
+  - Kullanım senaryoları
+  - Alt modül açıklamaları
+- **Ana sayfadan modül sayfalarına navigasyon** - ModuleGallery bileşenindeki kartlardan detay sayfalarına yönlendirme eklendi
+
+## [v0.4.0] - 2025-06-23
+### Changed
+- **Marka İsmi Standardizasyonu** - "AgentsPalace" yerine "Agent Palace" kullanımına geçiş
+  - Tüm kullanıcı arayüzü metinleri güncellendi
+  - Meta başlıkları ve açıklamaları güncellendi
+  - Dokümantasyon içeriklerinde standartlaştırma yapıldı
+  - Marka modül isimlerinin kullanıcı arayüzündeki gösterimleri standardize edildi (AgentsFlow → Agent Palace Flow)
+- **Yeni ADR Eklendi** - Marka ismi standartlaştırması için `docs/adr/0003-brand-name-standardization.md`
+
 ## [v0.3.0] - 2025-01-22
 ### Added
 - **SDLC Dokümantasyon Sistemi** - Kapsamlı dokümantasyon altyapısı

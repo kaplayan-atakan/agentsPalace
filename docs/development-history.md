@@ -41,6 +41,24 @@ Projenin tüm önemli kilometre taşları, feature eklemeleri ve mimari değişi
   - AgentsMap resource optimization
   - Intelligent automation features
 
+### Milestone 4: Module Detail Pages (2025-06-22)
+- **Durum:** ✅ Başlandı
+- **Açıklama:** Agent Palace platformunun modüllerini detaylı anlatan sayfaların oluşturulması
+- **Çıktılar:**
+  - Modül detay sayfaları için proposal oluşturuldu
+  - Agent Palace Flow modül sayfası geliştirilerek ilk detay sayfası tamamlandı
+  - Ana landingpage'den modül sayfalarına navigasyon eklendi
+  - Modül sayfaları için teknik dokümantasyon oluşturuldu
+
+### Milestone 3: Brand Name Standardization (2025-06-23)
+- **Durum:** ✅ Tamamlandı
+- **Açıklama:** Marka isminin "AgentsPalace" formundan "Agent Palace" formuna standardize edilmesi
+- **Çıktılar:**
+  - Tüm kullanıcı arayüzü metinleri güncellendi
+  - Dokümantasyon güncellendi
+  - Yeni ADR oluşturuldu: 0003-brand-name-standardization.md
+  - Komponent adlandırma standartları belirlendi (AgentsFlow → Agent Palace Flow)
+
 ## 📊 Feature Development Timeline
 
 | Tarih       | Feature/Milestone                     | Durum | İlgili Dosyalar                           | Açıklama                                    |

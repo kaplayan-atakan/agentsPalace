@@ -11,11 +11,11 @@ import {
   Mic,
   ArrowRight
 } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ModuleGallery() {
-  const modules = [
-    {      id: 'flow',
-      name: 'AgentsFlow',
+  const modules = [    {      id: 'flow',
+      name: 'Agent Palace Flow',
       slogan: 'Design. Trigger. Automate.',
       description: 'Akış tabanlı otomasyon, koşullu yönlendirme, görsel sürükle-bırak flow builder',
       icon: Workflow,      className: "text-electric-purple",
@@ -28,9 +28,8 @@ export default function ModuleGallery() {
         'Low-code workflow builder UI'
       ],
       status: 'Core Module'
-    },
-    {      id: 'task',
-      name: 'AgentsTask',
+    },    {      id: 'task',
+      name: 'Agent Palace Task',
       slogan: 'Every Task, The Right Agent.',
       description: 'Görev tabanlı agent orchestrasyonu, task assignment ve agent matchmaking',
       icon: CheckSquare,      className: "text-cyber-green",
@@ -43,9 +42,8 @@ export default function ModuleGallery() {
       ],
       status: 'Core Module'
     },
-    {
-      id: 'ops',
-      name: 'AgentsOps',
+    {      id: 'ops',
+      name: 'Agent Palace Ops',
       slogan: 'Zero Downtime, Maximum Insight.',
       description: 'Operasyonel yönetim, performans takibi ve sağlık izleme',
       icon: Activity,
@@ -217,13 +215,15 @@ export default function ModuleGallery() {
                   ))}
                 </div>
 
-                {/* Action Button */}                <motion.div
-                  whileHover={{ x: 5 }}
-                  className={`flex items-center gap-2 text-sm font-semibold cursor-pointer ${module.className}`}
-                >
-                  <span>Detayları Keşfet</span>
-                  <ArrowRight className="w-4 h-4" />
-                </motion.div>                {/* Hover Background Effect */}
+                {/* Action Button */}                <Link href={`/modules/${module.id}`}>
+                  <motion.div
+                    whileHover={{ x: 5 }}
+                    className={`flex items-center gap-2 text-sm font-semibold cursor-pointer ${module.className}`}
+                  >
+                    <span>Detayları Keşfet</span>
+                    <ArrowRight className="w-4 h-4" />
+                  </motion.div>
+                </Link>{/* Hover Background Effect */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 bg-gradient-to-br from-current to-transparent"></div>
               </div>
             </motion.div>
