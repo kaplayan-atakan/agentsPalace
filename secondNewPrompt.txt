@@ -1,0 +1,53 @@
+### 1. Instructions Dosyası Güncellemesi
+
+Aşağıdaki eklemeleri mevcut instructions dosyasının uygun bölümlerine ekleyebilirsiniz:
+
+````markdown name=landing-page/.github/copilot-instructions.md
+# AgentsPalace Landing Page - Copilot Instructions
+
+<!-- ... önceki içerik ... -->
+
+## Project Overview
+
+Bu proje, AgentsPalace AI Agent Orchestration Hub için bir Next.js landing page'idir. Blade Runner 2049 estetiği ile siber-fütüristik tasarım benimsenmiştir.
+
+**Not:** Landing page geliştirilirken, AgentsPalace ana platformu ve modüllerinin mimarisinde de aktif geliştirme devam etmektedir. Bu nedenle landing page; platformun nihai haliyle tam uyumlu olmalı, aynı zamanda ürünün gelişimiyle paralel olarak güncellenmeye açık tutulmalıdır.
+
+## Content Guidelines
+
+### Tone of Voice
+- Türkçe içerik
+- Teknik ama anlaşılır
+- Vizyoner ve güçlü
+- B2B enterprise odaklı
+
+**Ek:** Landing page, ön çalışma ve fikir yürütme aşamasında görsel olarak esnek ve yaratıcı bir yaklaşım sunmalıdır. Platformun gelişim sürecini yansıtan dinamik içerikler ve keşif odaklı öğeler barındırabilir.
+
+### Key Messages
+
+- "Orchestrate the Future"
+- "Where Agents Come Alive"
+- AI agent orchestration hub
+- Microservice architecture
+- Multi-language support
+
+**Ek:** Görsellik, geliştirici, yatırımcı ve pazarlama/reklam ekibi gibi farklı paydaşlara hitap edecek şekilde efektif kullanılmalıdır. Tasarımda; teknik yeterlilik, yenilikçilik ve pazarlama açısından güçlü bir ilk izlenim sağlanmasına özen gösterilmeli, görsel öğeler amaca uygun seçilmelidir.
+
+<!-- ... kalan içerik ... -->
+````
+
+---
+
+### 2. Kodlama Agent’ı için Prompt
+
+Aşağıdaki promptu agent’ınızda kullanabilirsiniz:
+
+---
+
+**Prompt:**
+
+- landing-page/.github/copilot-instructions.md dosyasındaki talimatları dikkatlice incele.
+- AgentsPalace’ın ana platformu ve modüllerinde geliştirmeler devam ettiği için, landing page’de yapılan her tasarım ve içerik çalışmasının platformun güncel ve gelişen mimarisiyle uyumlu olmasına özen göster.
+- Landing page’in, fikir geliştirme ve ön çalışma aşamalarında görsel olarak esnek ve yaratıcı bir yaklaşım sunması gerektiğini unutma.
+- Kodlama ve tasarımda, görselliği geliştirici, yatırımcı ve pazarlama/reklam ekiplerine uygun şekilde efektif kullanmaya odaklan.
+- Tüm geliştirme ve önerilerinde instructions dosyasındaki güncel talimatlara ve eklenen maddelere kesinlikle uy.

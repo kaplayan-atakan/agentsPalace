@@ -1,0 +1,7 @@
+Aşağıdaki görevleri yerine getirmeni istiyorum:
+
+1. [agentsPalace landing-page projesinin Copilot instructions dosyasını](landing-page/.github/copilot-instructions.md) oku ve analiz et.
+2. Yaptığın tüm geliştirme ve önerilerde, bu instructions dosyasındaki tasarım, içerik, teknik ve stil yönergelerini MUTLAKA temel al.
+3. Eğer instructions dosyasında güncelleme veya iyileştirme gerektiren kısımlar tespit edersen, mantıklı önerilerle bu dosyayı da güncelle.
+4. Tüm çıktı, kod ve açıklamalarında instructions dosyasındaki yaklaşım, teknik gereksinimler ve içerik tonunu koru ve tutarlı ol.
+5. Geliştirmeleri ve güncellemeleri yaparken instructions dosyasına uygun hareket ettiğinden emin ol.
