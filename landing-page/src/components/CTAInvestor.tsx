@@ -21,7 +21,8 @@ export default function CTAInvestor() {
       title: 'Geleceğin AI Altyapısına Yatırım Yapın',
       description: 'Sürdürülebilir, modüler ve yüksek büyüme potansiyeli olan AI orchestration platformu',
       icon: TrendingUp,
-      color: 'var(--neon-orange)',
+      className: "text-neon-orange",
+      color: "#ff7e29",
       features: [
         'Enterprise-ready B2B SaaS model',
         'Recurring revenue & scalable architecture',
@@ -35,7 +36,8 @@ export default function CTAInvestor() {
       title: 'Alpha Sürümde Yer Alın',
       description: 'Esnek, çok dilli microservice mimarisiyle hızlı geliştirme imkanı',
       icon: Code,
-      color: 'var(--cyber-green)',
+      className: "text-cyber-green",
+      color: "#39ff14",
       features: [
         'Multi-language SDK (Node.js, .NET, Python, Go)',
         'Docker-first development experience',
@@ -49,7 +51,8 @@ export default function CTAInvestor() {
       title: 'Pilot Projede Yer Alın',
       description: 'Gerçek iş senaryolarında hızlı değer sunan, düşük giriş maliyetli platform deneyimi',
       icon: Rocket,
-      color: 'var(--electric-purple)',
+      className: "text-electric-purple",
+      color: "#a259f7",
       features: [
         'Free pilot program & onboarding',
         'Dedicated success manager',
@@ -78,13 +81,13 @@ export default function CTAInvestor() {
           className="text-center mb-20"
         >
           <div className="flex items-center justify-center gap-2 mb-4">
-            <Sparkles className="w-8 h-8 text-[var(--cyber-green)]" />
-            <h2 className="text-4xl md:text-6xl font-bold font-['Orbitron'] text-white">
-              <span className="bg-gradient-to-r from-[var(--electric-purple)] to-[var(--cyber-green)] bg-clip-text text-transparent">
+            <Sparkles className="w-8 h-8 text-cyber-green" />
+            <h2 className="text-4xl md:text-6xl font-bold font-orbitron text-white">
+              <span className="bg-gradient-to-r from-electric-purple to-cyber-green bg-clip-text text-transparent">
                 Büyümeye Katılın
               </span>
             </h2>
-            <Sparkles className="w-8 h-8 text-[var(--electric-purple)]" />
+            <Sparkles className="w-8 h-8 text-electric-purple" />
           </div>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
             Yapay zekanın üretim gücünü yöneten yeni bir çağ başlıyor. Sizin yeriniz neresi?
@@ -103,32 +106,17 @@ export default function CTAInvestor() {
               whileHover={{ scale: 1.05, y: -10 }}
               className="group relative"
             >
-              <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:border-white/30 transition-all duration-500 group-hover:glow-box">
-                {/* Header */}
-                <div className="text-center mb-6">
-                  <div 
-                    className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300"
-                    style={{ 
-                      background: `linear-gradient(135deg, ${stakeholder.color}20, ${stakeholder.color}40)`,
-                      border: `2px solid ${stakeholder.color}60`
-                    }}
-                  >
+              <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:border-white/30 transition-all duration-500 group-hover:shadow-glow">
+                {/* Header */}                <div className="text-center mb-6">
+                  <div className="w-20 h-20 rounded-full mx-auto mb-4 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-white/10 to-white/5 border-2 border-white/20">
                     <stakeholder.icon 
-                      className="w-10 h-10" 
-                      style={{ color: stakeholder.color }} 
+                      className={`w-10 h-10 ${stakeholder.className}`}
                     />
                   </div>
-                  <div 
-                    className="inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4"
-                    style={{ 
-                      backgroundColor: `${stakeholder.color}20`,
-                      color: stakeholder.color,
-                      border: `1px solid ${stakeholder.color}40`
-                    }}
-                  >
+                  <div className={`inline-block px-4 py-2 rounded-full text-sm font-semibold mb-4 ${stakeholder.className} border border-current/40 ${stakeholder.className.replace('text-', 'bg-')}/20`}>
                     {stakeholder.type}
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-3 group-hover:glow-text">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:drop-shadow-neon">
                     {stakeholder.title}
                   </h3>
                   <p className="text-gray-300 leading-relaxed mb-6">
@@ -156,26 +144,17 @@ export default function CTAInvestor() {
                   ))}
                 </div>
 
-                {/* CTA Button */}
-                <motion.button
+                {/* CTA Button */}                <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full neon-button px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2"
-                  style={{ 
-                    background: `linear-gradient(135deg, ${stakeholder.color}20, ${stakeholder.color}10)`,
-                    border: `2px solid ${stakeholder.color}60`,
-                    color: stakeholder.color
-                  }}
+                  className={`w-full px-6 py-3 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 ${stakeholder.className} border-2 border-current/60 ${stakeholder.className.replace('text-', 'bg-')}/20`}
                 >
                   {stakeholder.cta}
                   <ArrowRight className="w-4 h-4" />
                 </motion.button>
 
                 {/* Hover Effect */}
-                <div 
-                  className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-500"
-                  style={{ background: `linear-gradient(135deg, ${stakeholder.color}, transparent)` }}
-                ></div>
+                <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 bg-gradient-to-br from-current to-transparent"></div>
               </div>
             </motion.div>
           ))}
@@ -189,9 +168,9 @@ export default function CTAInvestor() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-4xl mx-auto"
         >
-          <div className="bg-gradient-to-r from-[var(--obsidian-800)] to-[var(--obsidian-700)] backdrop-blur-sm border border-[var(--electric-purple)]/30 rounded-2xl p-8">
+          <div className="bg-gradient-to-r from-obsidian-800 to-obsidian-700 backdrop-blur-sm border border-electric-purple/30 rounded-2xl p-8">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-white mb-4 font-['Orbitron']">
+              <h3 className="text-2xl font-bold text-white mb-4 font-orbitron">
                 İletişime Geçin
               </h3>
               <p className="text-gray-300">
@@ -208,18 +187,18 @@ export default function CTAInvestor() {
                     <input 
                       type="text" 
                       placeholder="Adınız"
-                      className="w-full px-4 py-3 bg-black/30 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-[var(--electric-purple)] focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-black/30 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-electric-purple focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
                     <input 
                       type="email" 
                       placeholder="E-mail adresiniz"
-                      className="w-full px-4 py-3 bg-black/30 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-[var(--electric-purple)] focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-black/30 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-electric-purple focus:outline-none transition-colors"
                     />
                   </div>
                   <div>
-                    <select className="w-full px-4 py-3 bg-black/30 border border-white/10 rounded-lg text-white focus:border-[var(--electric-purple)] focus:outline-none transition-colors">
+                    <select className="w-full px-4 py-3 bg-black/30 border border-white/10 rounded-lg text-white focus:border-electric-purple focus:outline-none transition-colors">
                       <option value="">İlgi alanınızı seçin</option>
                       <option value="investor">Yatırımcı</option>
                       <option value="developer">Geliştirici</option>
@@ -230,7 +209,7 @@ export default function CTAInvestor() {
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-full neon-button px-6 py-3 bg-gradient-to-r from-[var(--electric-purple)] to-[var(--electric-blue)] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+                    className="w-full px-6 py-3 bg-gradient-to-r from-electric-purple to-electric-blue text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
                   >
                     <Mail className="w-4 h-4" />
                     Mesaj Gönder
@@ -245,9 +224,9 @@ export default function CTAInvestor() {
                   <motion.a
                     href="#"
                     whileHover={{ scale: 1.05, x: 5 }}
-                    className="flex items-center gap-3 p-4 bg-black/30 border border-white/10 rounded-lg hover:border-[var(--cyber-green)] transition-all duration-300"
+                    className="flex items-center gap-3 p-4 bg-black/30 border border-white/10 rounded-lg hover:border-cyber-green transition-all duration-300"
                   >
-                    <Calendar className="w-5 h-5 text-[var(--cyber-green)]" />
+                    <Calendar className="w-5 h-5 text-cyber-green" />
                     <div>
                       <div className="text-white font-medium">Demo Randevusu</div>
                       <div className="text-sm text-gray-400">Calendly bağlantısı</div>
@@ -257,9 +236,9 @@ export default function CTAInvestor() {
                   <motion.a
                     href="#"
                     whileHover={{ scale: 1.05, x: 5 }}
-                    className="flex items-center gap-3 p-4 bg-black/30 border border-white/10 rounded-lg hover:border-[var(--electric-blue)] transition-all duration-300"
+                    className="flex items-center gap-3 p-4 bg-black/30 border border-white/10 rounded-lg hover:border-electric-blue transition-all duration-300"
                   >
-                    <LinkedinIcon className="w-5 h-5 text-[var(--electric-blue)]" />
+                    <LinkedinIcon className="w-5 h-5 text-electric-blue" />
                     <div>
                       <div className="text-white font-medium">LinkedIn</div>
                       <div className="text-sm text-gray-400">Profesyonel ağ</div>
@@ -269,9 +248,9 @@ export default function CTAInvestor() {
                   <motion.a
                     href="#"
                     whileHover={{ scale: 1.05, x: 5 }}
-                    className="flex items-center gap-3 p-4 bg-black/30 border border-white/10 rounded-lg hover:border-[var(--neon-orange)] transition-all duration-300"
+                    className="flex items-center gap-3 p-4 bg-black/30 border border-white/10 rounded-lg hover:border-neon-orange transition-all duration-300"
                   >
-                    <Github className="w-5 h-5 text-[var(--neon-orange)]" />
+                    <Github className="w-5 h-5 text-neon-orange" />
                     <div>
                       <div className="text-white font-medium">GitHub</div>
                       <div className="text-sm text-gray-400">Açık kaynak projeleri</div>
@@ -291,9 +270,9 @@ export default function CTAInvestor() {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="text-center mt-16"
         >
-          <h3 className="text-3xl font-bold text-white mb-4 font-['Orbitron']">
-            <span className="text-[var(--cyber-green)]">Yapay Zeka</span> Çağının{' '}
-            <span className="text-[var(--electric-purple)]">Liderleri</span> Olun
+          <h3 className="text-3xl font-bold text-white mb-4 font-orbitron">
+            <span className="text-cyber-green">Yapay Zeka</span> Çağının{' '}
+            <span className="text-electric-purple">Liderleri</span> Olun
           </h3>
           <p className="text-xl text-gray-300 mb-8">
             AgentsPalace ile geleceği bugünden inşa etmeye başlayın
@@ -302,7 +281,7 @@ export default function CTAInvestor() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="neon-button px-8 py-4 bg-gradient-to-r from-[var(--electric-purple)] to-[var(--cyber-green)] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-gradient-to-r from-electric-purple to-cyber-green text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300 flex items-center justify-center gap-2"
             >
               <Rocket className="w-5 h-5" />
               Hemen Başla
@@ -310,7 +289,7 @@ export default function CTAInvestor() {
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="neon-button px-8 py-4 bg-transparent border-2 border-[var(--cyber-green)] text-[var(--cyber-green)] font-semibold rounded-lg hover:bg-[var(--cyber-green)] hover:text-black transition-all duration-300 flex items-center justify-center gap-2"
+              className="px-8 py-4 bg-transparent border-2 border-cyber-green text-cyber-green font-semibold rounded-lg hover:bg-cyber-green hover:text-black transition-all duration-300 flex items-center justify-center gap-2"
             >
               <Users className="w-5 h-5" />
               Topluluğa Katıl

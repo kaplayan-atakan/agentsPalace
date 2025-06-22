@@ -44,7 +44,7 @@ export default function Footer() {
   };
 
   return (
-    <footer className="relative bg-[var(--obsidian-900)] border-t border-white/10">
+    <footer className="relative bg-obsidian-900 border-t border-white/10">
       {/* Background Pattern */}
       <div className="absolute inset-0 cyber-grid opacity-5"></div>
       
@@ -63,14 +63,14 @@ export default function Footer() {
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="relative">
-                    <Network className="w-10 h-10 text-[var(--electric-blue)] glow-text" />
+                    <Network className="w-10 h-10 text-electric-blue drop-shadow-neon" />
                     <motion.div
                       animate={{ rotate: 360 }}
                       transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-                      className="absolute -top-1 -right-1 w-4 h-4 bg-[var(--cyber-green)] rounded-full opacity-80"
+                      className="absolute -top-1 -right-1 w-4 h-4 bg-cyber-green rounded-full opacity-80"
                     ></motion.div>
                   </div>
-                  <h3 className="text-2xl font-bold text-white font-['Orbitron']">
+                  <h3 className="text-2xl font-bold text-white font-orbitron">
                     AgentsPalace
                   </h3>
                 </div>
@@ -79,11 +79,10 @@ export default function Footer() {
                 </p>
                 
                 {/* Social Links */}
-                <div className="flex gap-4">
-                  {[
-                    { icon: Github, href: '#github', color: 'var(--cyber-green)' },
-                    { icon: LinkedinIcon, href: '#linkedin', color: 'var(--electric-blue)' },
-                    { icon: Mail, href: '#email', color: 'var(--neon-orange)' }
+                <div className="flex gap-4">                  {[
+                    { icon: Github, href: '#github', className: "text-cyber-green", color: "#39ff14" },
+                    { icon: LinkedinIcon, href: '#linkedin', className: "text-electric-blue", color: "#6236ff" },
+                    { icon: Mail, href: '#email', className: "text-neon-orange", color: "#ff7e29" }
                   ].map((social, index) => (
                     <motion.a
                       key={index}
@@ -91,10 +90,8 @@ export default function Footer() {
                       whileHover={{ scale: 1.1, y: -2 }}
                       whileTap={{ scale: 0.95 }}
                       className="w-10 h-10 bg-black/30 border border-white/10 rounded-lg flex items-center justify-center hover:border-white/30 transition-all duration-300"
-                    >
-                      <social.icon 
-                        className="w-5 h-5" 
-                        style={{ color: social.color }} 
+                    >                      <social.icon 
+                        className={`w-5 h-5 ${social.className}`}
                       />
                     </motion.a>
                   ))}
@@ -110,8 +107,8 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.1 }}
               >
-                <h4 className="text-lg font-semibold text-white mb-6 font-['Orbitron']">
-                  <span className="text-[var(--electric-purple)]">Modüller</span>
+                <h4 className="text-lg font-semibold text-white mb-6 font-orbitron">
+                  <span className="text-electric-purple">Modüller</span>
                 </h4>
                 <nav className="space-y-3">
                   {modules.map((module) => (
@@ -119,7 +116,7 @@ export default function Footer() {
                       key={module.name}
                       href={module.href}
                       whileHover={{ x: 5 }}
-                      className="block text-gray-300 hover:text-[var(--electric-purple)] transition-colors duration-200"
+                      className="block text-gray-300 hover:text-electric-purple transition-colors duration-200"
                     >
                       {module.name}
                     </motion.a>
@@ -136,8 +133,8 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.2 }}
               >
-                <h4 className="text-lg font-semibold text-white mb-6 font-['Orbitron']">
-                  <span className="text-[var(--cyber-green)]">Kaynaklar</span>
+                <h4 className="text-lg font-semibold text-white mb-6 font-orbitron">
+                  <span className="text-cyber-green">Kaynaklar</span>
                 </h4>
                 <nav className="space-y-3">
                   {resources.map((resource) => (
@@ -145,7 +142,7 @@ export default function Footer() {
                       key={resource.name}
                       href={resource.href}
                       whileHover={{ x: 5 }}
-                      className="flex items-center gap-2 text-gray-300 hover:text-[var(--cyber-green)] transition-colors duration-200"
+                      className="flex items-center gap-2 text-gray-300 hover:text-cyber-green transition-colors duration-200"
                     >
                       {resource.name}
                       <ExternalLink className="w-3 h-3 opacity-50" />
@@ -163,8 +160,8 @@ export default function Footer() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <h4 className="text-lg font-semibold text-white mb-6 font-['Orbitron']">
-                  <span className="text-[var(--neon-orange)]">Şirket</span>
+                <h4 className="text-lg font-semibold text-white mb-6 font-orbitron">
+                  <span className="text-neon-orange">Şirket</span>
                 </h4>
                 <nav className="space-y-3">
                   {company.map((item) => (
@@ -172,7 +169,7 @@ export default function Footer() {
                       key={item.name}
                       href={item.href}
                       whileHover={{ x: 5 }}
-                      className="block text-gray-300 hover:text-[var(--neon-orange)] transition-colors duration-200"
+                      className="block text-gray-300 hover:text-neon-orange transition-colors duration-200"
                     >
                       {item.name}
                     </motion.a>
@@ -202,12 +199,12 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder="E-mail adresiniz"
-                className="flex-1 px-4 py-3 bg-black/30 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-[var(--electric-purple)] focus:outline-none transition-colors"
+                className="flex-1 px-4 py-3 bg-black/30 border border-white/10 rounded-lg text-white placeholder-gray-400 focus:border-electric-purple focus:outline-none transition-colors"
               />
               <motion.button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="neon-button px-6 py-3 bg-gradient-to-r from-[var(--electric-purple)] to-[var(--electric-blue)] text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
+                className="px-6 py-3 bg-gradient-to-r from-electric-purple to-electric-blue text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-300"
               >
                 Abone Ol
               </motion.button>
@@ -243,7 +240,7 @@ export default function Footer() {
               onClick={scrollToTop}
               whileHover={{ scale: 1.1, y: -2 }}
               whileTap={{ scale: 0.95 }}
-              className="w-10 h-10 bg-gradient-to-r from-[var(--electric-purple)] to-[var(--electric-blue)] rounded-full flex items-center justify-center hover:shadow-lg transition-all duration-300"
+              className="w-10 h-10 bg-gradient-to-r from-electric-purple to-electric-blue rounded-full flex items-center justify-center hover:shadow-lg transition-all duration-300"
             >
               <ArrowUp className="w-5 h-5 text-white" />
             </motion.button>
@@ -252,9 +249,9 @@ export default function Footer() {
       </div>
 
       {/* Animated Background Elements */}
-      <div className="absolute bottom-10 left-10 w-2 h-2 bg-[var(--cyber-green)] rounded-full animate-pulse"></div>
-      <div className="absolute bottom-20 right-20 w-3 h-3 bg-[var(--electric-purple)] rounded-full animate-pulse delay-500"></div>
-      <div className="absolute top-10 right-1/4 w-1 h-1 bg-[var(--neon-orange)] rounded-full animate-pulse delay-1000"></div>
+      <div className="absolute bottom-10 left-10 w-2 h-2 bg-cyber-green rounded-full animate-pulse"></div>
+      <div className="absolute bottom-20 right-20 w-3 h-3 bg-electric-purple rounded-full animate-pulse delay-500"></div>
+      <div className="absolute top-10 right-1/4 w-1 h-1 bg-neon-orange rounded-full animate-pulse delay-1000"></div>
     </footer>
   );
 }

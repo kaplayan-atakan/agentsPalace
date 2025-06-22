@@ -12,62 +12,68 @@ import {
   Shield
 } from 'lucide-react';
 
-export default function PlatformFeatures() {
-  const features = [
+export default function PlatformFeatures() {  const features = [
     {
       icon: Network,
       title: "Microservice Mimarisi",
       description: "Her modül bağımsız Docker container olarak çalışır ve ölçeklenir",
-      color: "var(--electric-purple)",
+      className: "text-electric-purple",
+      color: "#a259f7",
       delay: 0
     },
     {
       icon: Code2,
       title: "Çoklu Dil Desteği",
       description: "Node.js öncelikli, .NET, Python ve Go agent geliştirme desteği",
-      color: "var(--cyber-green)",
+      className: "text-cyber-green",
+      color: "#39ff14",
       delay: 0.1
-    },
-    {
+    },    {
       icon: Container,
       title: "Docker Tabanlı Runtime",
       description: "Containerized deployment ve otomatik scaling desteği",
-      color: "var(--electric-blue)",
+      className: "text-electric-blue",
+      color: "#6236ff",
       delay: 0.2
     },
     {
       icon: MessageSquare,
       title: "Kafka Message Bus",
       description: "Yüksek performanslı, güvenilir event-driven komunikasyon",
-      color: "var(--neon-orange)",
+      className: "text-neon-orange",
+      color: "#ff7e29",
       delay: 0.3
     },
     {
       icon: Settings,
       title: "Merkezi Konfigürasyon",
       description: "Tek noktadan tüm agent'lar ve akışlar için yapılandırma yönetimi",
-      color: "var(--cyber-mint)",
+      className: "text-cyber-mint",
+      color: "#00ffb3",
       delay: 0.4
     },
     {
       icon: BarChart3,
       title: "Gerçek Zamanlı İzleme",
       description: "Canlı dashboard, metrikler ve performans takibi",
-      color: "var(--neon-red)",
+      className: "text-neon-red",
+      color: "#ff4e00",
       delay: 0.5
     },
     {
       icon: Globe,
       title: "Ölçeklenebilir Altyapı",
       description: "Yük artışında otomatik scaling ve load balancing",
-      color: "var(--electric-purple)",
+      className: "text-electric-purple",
+      color: "#a259f7",
       delay: 0.6
     },
     {
       icon: Shield,
       title: "Güvenlik & Yetkilendirme",
       description: "RBAC, API token yönetimi ve güvenli agent iletişimi",
-      color: "var(--cyber-green)",
+      className: "text-cyber-green",
+      color: "#39ff14",
       delay: 0.7
     }
   ];
@@ -76,8 +82,8 @@ export default function PlatformFeatures() {
     <section className="py-24 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
-        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-[var(--obsidian-800)]/50 to-transparent"></div>
-        <div className="cyber-grid opacity-10"></div>
+        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-transparent via-obsidian-800/50 to-transparent"></div>
+        <div className="cyber-grid opacity-10 bg-cyber-grid bg-grid"></div>
       </div>
 
       <div className="container mx-auto px-6 relative z-10">
@@ -89,8 +95,8 @@ export default function PlatformFeatures() {
           transition={{ duration: 0.8 }}
           className="text-center mb-20"
         >
-          <h2 className="text-4xl md:text-6xl font-bold font-['Orbitron'] text-white mb-6">
-            <span className="bg-gradient-to-r from-[var(--electric-purple)] to-[var(--cyber-green)] bg-clip-text text-transparent">
+          <h2 className="text-4xl md:text-6xl font-bold font-orbitron text-white mb-6">
+            <span className="bg-gradient-to-r from-electric-purple to-cyber-green bg-clip-text text-transparent">
               Platform Özellikleri
             </span>
           </h2>
@@ -108,7 +114,7 @@ export default function PlatformFeatures() {
           className="mb-20"
         >
           <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-2xl p-8 max-w-5xl mx-auto">
-            <h3 className="text-2xl font-bold text-center text-white mb-8 font-['Orbitron']">
+            <h3 className="text-2xl font-bold text-center text-white mb-8 font-orbitron">
               Core Architecture
             </h3>
             
@@ -116,8 +122,8 @@ export default function PlatformFeatures() {
               {/* Left: Languages */}
               <div className="text-center">
                 <div className="flex justify-center items-center gap-2 mb-4">
-                  <div className="w-3 h-3 bg-[var(--cyber-green)] rounded-full animate-pulse"></div>
-                  <span className="text-[var(--cyber-green)] font-semibold">Multi-Language</span>
+                  <div className="w-3 h-3 bg-cyber-green rounded-full animate-pulse"></div>
+                  <span className="text-cyber-green font-semibold">Multi-Language</span>
                 </div>
                 <div className="space-y-2">
                   <div className="text-sm text-gray-300">Node.js (Primary)</div>
@@ -138,7 +144,7 @@ export default function PlatformFeatures() {
                     ]
                   }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="bg-gradient-to-r from-[var(--electric-purple)] to-[var(--electric-blue)] rounded-full w-32 h-32 mx-auto flex items-center justify-center mb-4"
+                  className="bg-gradient-to-r from-electric-purple to-electric-blue rounded-full w-32 h-32 mx-auto flex items-center justify-center mb-4"
                 >
                   <Network className="w-16 h-16 text-white" />
                 </motion.div>
@@ -149,8 +155,8 @@ export default function PlatformFeatures() {
               {/* Right: Deployment */}
               <div className="text-center">
                 <div className="flex justify-center items-center gap-2 mb-4">
-                  <div className="w-3 h-3 bg-[var(--neon-orange)] rounded-full animate-pulse"></div>
-                  <span className="text-[var(--neon-orange)] font-semibold">Deployment</span>
+                  <div className="w-3 h-3 bg-neon-orange rounded-full animate-pulse"></div>
+                  <span className="text-neon-orange font-semibold">Deployment</span>
                 </div>
                 <div className="space-y-2">
                   <div className="text-sm text-gray-300">Docker Containers</div>
@@ -179,36 +185,23 @@ export default function PlatformFeatures() {
               }}
               className="group relative"
             >
-              <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 h-full hover:border-white/30 transition-all duration-300 group-hover:glow-box">
-                {/* Icon */}
-                <div className="mb-4">
-                  <div 
-                    className="w-12 h-12 rounded-lg flex items-center justify-center"
-                    style={{ 
-                      background: `linear-gradient(135deg, ${feature.color}20, ${feature.color}40)`,
-                      border: `1px solid ${feature.color}60`
-                    }}
-                  >
+              <div className="bg-black/40 backdrop-blur-sm border border-white/10 rounded-xl p-6 h-full hover:border-white/30 transition-all duration-300 group-hover:shadow-glow">
+                {/* Icon */}                <div className="mb-4">
+                  <div className="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-white/10 to-white/5 border border-white/20">
                     <feature.icon 
-                      className="w-6 h-6" 
-                      style={{ color: feature.color }} 
+                      className={`w-6 h-6 ${feature.className}`}
                     />
                   </div>
                 </div>
 
                 {/* Content */}
-                <h3 className="text-lg font-semibold text-white mb-3 group-hover:glow-text transition-all">
+                <h3 className="text-lg font-semibold text-white mb-3 group-hover:drop-shadow-neon transition-all">
                   {feature.title}
                 </h3>
                 <p className="text-gray-300 text-sm leading-relaxed">
                   {feature.description}
-                </p>
-
-                {/* Hover Effect */}
-                <div 
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300"
-                  style={{ background: `linear-gradient(135deg, ${feature.color}, transparent)` }}
-                ></div>
+                </p>                {/* Hover Effect */}
+                <div className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-10 transition-opacity duration-300 bg-gradient-to-br from-current to-transparent"></div>
               </div>
             </motion.div>
           ))}
@@ -222,8 +215,8 @@ export default function PlatformFeatures() {
           transition={{ duration: 0.8, delay: 0.5 }}
           className="text-center mt-20"
         >
-          <div className="bg-gradient-to-r from-[var(--obsidian-800)] to-[var(--obsidian-700)] backdrop-blur-sm border border-[var(--electric-purple)]/30 rounded-2xl p-8 max-w-4xl mx-auto">
-            <h3 className="text-2xl font-bold text-white mb-4 font-['Orbitron']">
+          <div className="bg-gradient-to-r from-obsidian-800 to-obsidian-700 backdrop-blur-sm border border-electric-purple/30 rounded-2xl p-8 max-w-4xl mx-auto">
+            <h3 className="text-2xl font-bold text-white mb-4 font-orbitron">
               Developer-First Yaklaşım
             </h3>
             <p className="text-gray-300 mb-6">
@@ -233,7 +226,7 @@ export default function PlatformFeatures() {
               {['SDK', 'REST API', 'CLI Tools', 'Open Source'].map((tool) => (
                 <span 
                   key={tool}
-                  className="px-4 py-2 bg-[var(--electric-purple)]/20 border border-[var(--electric-purple)]/40 rounded-full text-[var(--electric-purple)] text-sm font-medium"
+                  className="px-4 py-2 bg-electric-purple/20 border border-electric-purple/40 rounded-full text-electric-purple text-sm font-medium"
                 >
                   {tool}
                 </span>
