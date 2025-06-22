@@ -1,12 +1,46 @@
-# AgentsPalace Landing Page & Product Suite - README
+# AgentsPalace - AI Agent Orchestration Platform
 
-## Proje Vizyonu
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](https://github.com/agentspalace/agentspalace)
+[![Version](https://img.shields.io/badge/version-v0.3.0-blue)](https://github.com/agentspalace/agentspalace/releases)
+[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![Documentation](https://img.shields.io/badge/docs-comprehensive-orange)](docs/)
+
+## 🏰 Proje Vizyonu
 
 **AgentsPalace**, modern yapay zeka ve otonom sistemler çağında, dağıtık ve çok dilli (Node.js, .NET, Python, Go) microservice mimarisiyle geliştirilen, tüm agent'ların merkezi yönetimini sağlayan bir "AI Agent Orchestration Hub"dır. Platform; gerçek zamanlı akışlar, koşullu yönlendirme, gelişmiş hata yönetimi ve ölçeklenebilirlik vaat eden, yatırımcı, geliştirici ve ilk kullanıcıları için yüksek potansiyel barındıran bir inovasyon merkezidir.
 
+## 📋 SDLC & Dokümantasyon
+
+Bu proje kapsamlı bir **Software Development Life Cycle (SDLC)** ve dokümantasyon standardına uygun olarak geliştirilmektedir:
+
+### 📚 Dokümantasyon Yapısı
+- **[Development History](docs/development-history.md)** - Proje geliştirme geçmişi ve milestone'lar
+- **[Production Ready Checklist](docs/production-ready-checklist.md)** - Production hazırlık kontrol listesi
+- **[Change Log](docs/changelog.md)** - Versiyonlu değişiklik geçmişi
+- **[SDLC Instructions](docs/INSTRUCTIONS.md)** - Geliştirme süreç talimatları
+
+### 🏗️ Architecture & Diagrams
+- **[System Architecture](docs/architecture/system-architecture.md)** - Sistem mimarisi
+- **[Brand/Module Tree](docs/architecture/brand-tree.md)** - Marka ve modül hiyerarşisi
+- **[Data Flow Diagram](docs/architecture/data-flow.md)** - Veri akış diyagramları
+- **[Component Diagram](docs/architecture/component-diagram.md)** - Bileşen mimarisi
+- **[Deployment Diagram](docs/architecture/deployment-diagram.md)** - Deployment mimarisi
+
+### 🎯 Decision Records & Proposals
+- **[Architecture Decision Records (ADR)](docs/adr/)** - Teknik karar kayıtları
+  - [Next.js Framework Selection](docs/adr/0001-nextjs-framework-selection.md)
+  - [TailwindCSS + Framer Motion Stack](docs/adr/0002-tailwindcss-framer-motion-stack.md)
+- **[Feature Proposals](proposals/)** - Yeni özellik önerileri
+  - [Real-time Dashboard Implementation](proposals/2025-01-22-realtime-dashboard.md)
+
+### 🧪 Test & Quality
+- **[Manual Test Checklist](tests/manual-test-checklist.md)** - Manuel test kontrol listesi
+- **[Accessibility Tests](tests/accessibility-test.md)** - Erişilebilirlik testleri
+- **[Test Results](tests/test-results.md)** - Test sonuçları
+
 ---
 
-## Kapsam
+## 🚀 Kapsam & Platform Modülleri
 
 - Ana Platform: **AgentsPalace**
 - Modüller: AgentsFlow, AgentsTask, AgentsOps, AgentsMap, AgentsBrain, AgentsCore, AgentsVoice (isteğe bağlı)

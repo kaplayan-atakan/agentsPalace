@@ -1,0 +1,487 @@
+Tabii! Aşağıda, revize ettiğiniz SDLC sürecine uygun şekilde, **her geliştirme öncesi proposal ile onay alma**, **geliştirme sonrası tüm dokümantasyonun güncellenmesi** ve **her şeyin markdown olarak repo’da saklanması** prensipleriyle;  
+— **Tam prompt**,  
+— **Gerekli instructions**,  
+— **Tüm markdown şablonları**  
+— **Diyagram örnekleriyle birlikte**  
+eksiksiz ve birbirine referanslı şekilde bir arada sunulmuştur.
+
+---
+
+````markdown name=prompt-and-feature-base.md
+# AgentsPalace SDLC & Development Doc Standards
+
+## Agent Prompt
+
+Sen bir kodlama agent’ısın. Bu repodaki tüm geliştirmelerde şu kurallara eksiksiz uymalısın:
+
+---
+
+### 1. Proposal (Öneri) ve Onay Süreci
+
+- **Her yeni feature, mimari değişiklik veya önemli refactor öncesinde**;
+  - Yapılacak değişikliğin amacı, kapsamı, teknik etkileri, SDLC ve dokümantasyon gereksinimlerini içeren bir *proposal markdown dosyası* (`proposal/YYYY-MM-DD-feature-title.md`) hazırla.
+  - Proposal dosyasını proje sahibine sun, **onay almadan kod yazma**.
+  - Onaylandığında geliştirmeye başla.
+
+**Proposal dosyası şablonu:**
+
+````markdown name=proposal/YYYY-MM-DD-feature-title.md
+# Feature Proposal: [Kısa Başlık]
+
+## Amaç
+Bu değişikliğin/feature’ın amacı nedir? Hangi problemi çözüyor?
+
+## Kapsam
+- Hangi modül/bileşen(ler) etkilenecek?
+- Kullanıcıya veya sisteme yansıması nedir?
+
+## Teknik Detaylar
+- Uygulanacak mimari yaklaşım/teknolojiler
+- SDLC’ye etkileri (test coverage, CI/CD, dokümantasyon vb.)
+- Gereken yeni/updated diyagramlar ve dokümanlar
+
+## Riskler & Alternatifler
+- Potansiyel riskler veya alternatif yollar
+
+## Gereken Onaylar
+- [ ] Proje sahibi onayı
+- [ ] İlgili teknik lider/ekip onayı (gerekirse)
+
+## Ek Notlar
+- Ek açıklama veya referans (ilgili issue/ADR/doküman linki)
+````
+
+---
+
+### 2. Geliştirme ve Dokümantasyon
+
+- Onay sonrası geliştirme tamamlandığında;
+  - **Aşağıdaki tüm markdown dosyalarını güncelle** ve gerekirse yeni dosya ekle:
+    - `docs/development-history.md`
+    - `docs/production-ready-checklist.md`
+    - `docs/changelog.md`
+    - `docs/adr/` (her önemli teknik karar için yeni dosya)
+    - `docs/architecture/` (her diyagram için ayrı dosya)
+- Landing page’de, bu dosyalar otomatik olarak okunup, canlı şekilde görselleştirilir (örn. Mermaid gömülü diyagramlar, embed edilmiş SVG/PNG, timeline UI).
+
+---
+
+### 3. Diyagramlar ve Dokümantasyon
+
+- **Her büyük değişiklikte, aşağıdaki diyagramları güncel tut:**
+  - Product/Platform Overview Diagram
+  - Brand/Module Tree (Marka Ağacı)
+  - System Architecture Diagram
+  - Deployment Diagram
+  - Flow Engine Execution Diagram
+  - Data Flow Diagram (DFD)
+  - Message Flow Diagram
+  - Component Diagram
+  - Sequence Diagram
+  - Class/Entity Diagram
+  - OpenAPI/Swagger Spec (link/embed)
+  - ERD (Entity-Relationship Diagram)
+  - Monitoring/Observability Diagram
+  - CI/CD Pipeline Diagram
+- Diyagramlar için [Mermaid.js](https://mermaid.js.org/), [PlantUML](https://plantuml.com/), [draw.io](https://app.diagrams.net/), [Lucidchart](https://lucidchart.com), [Whimsical](https://whimsical.com/) araçlarını seçebilirsin.
+- Tercihen canlı (mermaid, plantuml) ya da SVG/PNG olarak `docs/architecture/` klasörüne ekle.
+
+---
+
+## Markdown Dosya Şablonları
+
+---
+
+````markdown name=docs/development-history.md
+# Development History
+
+Projenin tüm önemli kilometre taşları, feature eklemeleri ve mimari değişiklikleri kronolojik olarak burada listelenir.
+
+| Tarih       | Olay/Tanım                        | İlgili Issue/PR  | Açıklama                                           |
+|-------------|-----------------------------------|------------------|----------------------------------------------------|
+| 2025-06-10  | Proje Başlangıcı                  | #1               | Initial commit, repo skeleton, temel README        |
+| 2025-06-12  | AgentsFlow modülü eklendi         | #14              | Flow engine, JSON/YAML destekli akış mantığı       |
+| 2025-06-15  | Kafka mesajlaşma entegre edildi   | #22              | Event-driven microservice altyapısı                |
+| 2025-06-18  | İlk mimari diyagramlar yüklendi   | #26              | System ve Deployment diagramları                   |
+| ...         | ...                               | ...              | ...                                                |
+````
+
+---
+
+````markdown name=docs/production-ready-checklist.md
+# Production-Ready Checklist
+
+Bu proje production’a alınmadan önce tamamlanması gereken ana adımlar ve kontroller.
+
+- [x] Temel mimari belirlendi ve dokümante edildi (`docs/architecture/system-architecture.md`)
+- [x] Tüm modüller için birim testleri yazıldı ve %90+ coverage sağlandı
+- [x] CI/CD pipeline kuruldu ve otomatik testler çalışıyor
+- [x] Güvenlik denetimi tamamlandı (dependency check, SAST)
+- [x] Monitoring & logging sistemi entegre edildi
+- [x] API dokümantasyonu (OpenAPI/Swagger) yayınlandı
+- [x] Kullanıcı dokümantasyonu ve onboarding rehberi hazırlandı
+- [x] Son mimari ve veri akışı diyagramları güncellendi
+- [ ] Performans/stres testleri tamamlandı
+- [ ] Son production-ready review yapıldı
+````
+
+---
+
+````markdown name=docs/changelog.md
+# Change Log
+
+Tüm önemli değişiklikler, yeni feature’lar ve bugfix’ler burada listelenir.
+
+## [v0.2.0] - 2025-06-18
+### Added
+- AgentsTask modülü (feature #20)
+- System ve Deployment diyagramları (`docs/architecture/`)
+
+### Fixed
+- Flow engine concurrency bug (PR #25)
+
+---
+
+## [v0.1.0] - 2025-06-12
+### Added
+- AgentsFlow modülü
+- Development history sayfası
+````
+
+---
+
+````markdown name=docs/adr/0001-use-kafka-for-messaging.md
+# ADR 0001: Kafka Kullanımı
+
+## Status
+Accepted
+
+## Context
+Yüksek hacimli, event-driven microservice mimarisi için, güvenilir ve esnek bir mesajlaşma altyapısına ihtiyaç vardı.
+
+## Decision
+Tüm modüller arası event/message iletişimi için Apache Kafka kullanılacak.
+
+## Consequences
+- Yüksek throughput, ölçeklenebilirlik
+- Ek ops yönetimi, ek öğrenme eğrisi
+````
+
+---
+
+````markdown name=docs/architecture/system-architecture.md
+# System Architecture Diagram
+
+Bu diyagram, platformun temel bileşenlerini ve aralarındaki veri/mesaj akışını gösterir.
+
+```mermaid
+flowchart LR
+  UI[UI/Frontend]
+  API[API Gateway]
+  FLOW[AgentsFlow]
+  TASK[AgentsTask]
+  OPS[AgentsOps]
+  MAP[AgentsMap]
+  BRAIN[AgentsBrain]
+  KAFKA((Kafka Message Bus))
+  DB[(Database)]
+  UI --> API
+  API --> KAFKA
+  KAFKA --> FLOW
+  KAFKA --> TASK
+  KAFKA --> OPS
+  KAFKA --> MAP
+  KAFKA --> BRAIN
+  FLOW --> DB
+  TASK --> DB
+  OPS --> DB
+  MAP --> DB
+  BRAIN --> DB
+```
+````
+
+---
+
+````markdown name=docs/architecture/brand-tree.md
+# Brand/Module Tree (Marka Ağacı)
+
+Projenin marka ve modül hiyerarşisi.
+
+```mermaid
+graph TD
+  EA[everything agent (şirket)]
+  EA --> PALACE[AgentsPalace (ana platform)]
+  PALACE --> FLOW[AgentsFlow]
+  PALACE --> TASK[AgentsTask]
+  PALACE --> OPS[AgentsOps]
+  PALACE --> MAP[AgentsMap]
+  PALACE --> BRAIN[AgentsBrain]
+  PALACE --> CORE[AgentsCore]
+  PALACE --> VOICE[AgentsVoice (opsiyonel)]
+```
+````
+
+---
+
+````markdown name=docs/architecture/deployment-diagram.md
+# Deployment Diagram
+
+```mermaid
+flowchart TD
+  subgraph Cloud [Cloud Environment]
+    UI
+    API
+    FLOW
+    TASK
+    OPS
+    MAP
+    BRAIN
+    KAFKA
+    DB
+  end
+  subgraph CI/CD
+    GIT[GitHub Actions]
+    DOCKER[Docker Registry]
+  end
+  GIT --> DOCKER
+  DOCKER --> Cloud
+```
+````
+
+---
+
+````markdown name=docs/architecture/flow-engine-execution.md
+# Flow Engine Execution Diagram
+
+```mermaid
+sequenceDiagram
+  participant User
+  participant UI
+  participant API
+  participant FLOW
+  participant AGENT
+  User->>UI: Başlat (Trigger flow)
+  UI->>API: Flow isteği
+  API->>FLOW: Flow başlat
+  FLOW->>AGENT: Adım (Step) tetikle
+  AGENT-->>FLOW: Sonuç (success/error/timeout)
+  alt Success
+    FLOW->>FLOW: OnSuccess adımına yönlendir
+  else Error
+    FLOW->>FLOW: OnError veya Fallback adımına yönlendir
+  end
+  FLOW->>UI: Akış durumu/log dönüşü
+```
+````
+
+---
+
+````markdown name=docs/architecture/message-flow.md
+# Message Flow Diagram
+
+```mermaid
+flowchart TD
+  API
+  KAFKA((Kafka Bus))
+  FLOW
+  TASK
+  OPS
+  API -- Publish Event --> KAFKA
+  KAFKA -- Consume Event --> FLOW
+  KAFKA -- Consume Event --> TASK
+  KAFKA -- Consume Event --> OPS
+```
+````
+
+---
+
+````markdown name=docs/architecture/data-flow.md
+# Data Flow Diagram
+
+```mermaid
+flowchart LR
+  UI --> API --> FLOW --> DB
+  API --> TASK --> DB
+  API --> OPS --> DB
+  FLOW --> KAFKA
+  TASK --> KAFKA
+  OPS --> KAFKA
+```
+````
+
+---
+
+````markdown name=docs/architecture/component-diagram.md
+# Component Diagram
+
+```mermaid
+classDiagram
+  class AgentsFlow {
+    +FlowRunner
+    +ConfigParser
+    +EventLogger
+    +ErrorHandler
+  }
+  class AgentsTask {
+    +TaskQueue
+    +AgentSelector
+    +FeedbackLoop
+  }
+  class AgentsOps {
+    +HealthChecker
+    +MetricsCollector
+    +AutoScaler
+  }
+  AgentsFlow --|> AgentsTask
+  AgentsFlow --|> AgentsOps
+```
+````
+
+---
+
+````markdown name=docs/architecture/sequence-diagram.md
+# Sequence Diagram (Task Assignment)
+
+```mermaid
+sequenceDiagram
+  participant UI
+  participant API
+  participant TASK
+  participant AGENT
+  UI->>API: Yeni görev oluştur
+  API->>TASK: Görev isteği
+  TASK->>AGENT: Görevi ata
+  AGENT-->>TASK: Görev tamamlandı yanıtı
+  TASK-->>API: Sonuç
+  API-->>UI: Kullanıcıya bildirim
+```
+````
+
+---
+
+````markdown name=docs/architecture/class-entity-diagram.md
+# Class/Entity Diagram
+
+```mermaid
+erDiagram
+  AGENT ||--o{ FLOW : manages
+  FLOW ||--|{ TASK : includes
+  TASK ||--o| OPS : monitored_by
+  AGENT {
+    string id
+    string type
+    string status
+  }
+  FLOW {
+    string id
+    string name
+    string config
+  }
+  TASK {
+    string id
+    string type
+    string state
+  }
+  OPS {
+    string id
+    string metric
+    string value
+  }
+```
+````
+
+---
+
+````markdown name=docs/architecture/monitoring-diagram.md
+# Monitoring/Observability Diagram
+
+```mermaid
+flowchart TD
+  AGENTS
+  LOGS[Logging System]
+  METRICS[Metrics & Tracing]
+  ALERTS[Alerting/Notification]
+  AGENTS --> LOGS
+  AGENTS --> METRICS
+  METRICS --> ALERTS
+  LOGS --> ALERTS
+```
+````
+
+---
+
+````markdown name=docs/architecture/cicd-pipeline.md
+# CI/CD Pipeline Diagram
+
+```mermaid
+flowchart TD
+  GITHUB[GitHub]
+  TEST[Test Runner]
+  BUILD[Docker Build]
+  REGISTRY[Container Registry]
+  DEPLOY[Production/Staging]
+  GITHUB --> TEST
+  TEST --> BUILD
+  BUILD --> REGISTRY
+  REGISTRY --> DEPLOY
+```
+````
+
+---
+
+````markdown name=docs/architecture/openapi-link.md
+# OpenAPI/Swagger Spec
+
+Tüm API endpoint’leri ve veri modellerinin OpenAPI (Swagger) şeması:  
+[Swagger UI’ye Git](../openapi/swagger.yaml)  
+veya doğrudan bu dosyada gömülü olarak sunulabilir.
+
+---
+
+````markdown name=docs/architecture/erd.md
+# Entity-Relationship Diagram (ERD)
+
+```mermaid
+erDiagram
+  USER ||--o{ FLOW : creates
+  FLOW ||--|{ TASK : contains
+  TASK ||--o| AGENT : assigned_to
+  AGENT ||--o{ OPS : monitored_by
+```
+````
+
+---
+
+## INSTRUCTIONS.md
+
+````markdown name=docs/INSTRUCTIONS.md
+# Development History & Production-Ready Sayfası Güncelleme Talimatları
+
+1. **Her yeni geliştirme veya büyük değişiklik öncesi:**
+   - `proposal/YYYY-MM-DD-feature-title.md` dosyasını oluştur ve onay al.
+   - **Onay alınmadan kod yazma.**
+
+2. **Geliştirme tamamlandığında:**
+   - `docs/development-history.md` ve `docs/production-ready-checklist.md` dosyalarını güncelle.
+   - İlgili tüm teknik diyagramları (`docs/architecture/` altında) en güncel haliyle baştan oluştur veya revize et.
+   - Yeni veya güncellenen ADR’leri (`docs/adr/`) ekle.
+   - Gerekirse changelog’u (`docs/changelog.md`) güncelle.
+
+3. **Diyagramlar için:**
+   - Mümkünse [Mermaid.js](https://mermaid.js.org/) veya [PlantUML](https://plantuml.com/) kullan, böylece markdown içinde canlı görüntülenir.
+   - draw.io veya Lucidchart ile SVG/PNG diyagramı oluşturup `docs/architecture/` altına ekle, markdown’a embed et.
+   - Her diyagramı kısa açıklama ve tarih ile birlikte ekle.
+
+4. **Sayfa otomasyonu:**
+   - Yeni bir PR/commit’te, CI/CD pipeline veya pre-commit hook ile yukarıdaki dosyaların güncel olup olmadığını kontrol et.
+   - Otomatik güncelleme mümkün değilse, manuel güncellemede bu talimatlara uyulmalı.
+
+5. **Sürekli güncellik için:**
+   - Her yeni feature branch’inde bu sayfada ve ilgili markdownlarda güncelleme yapmayı unutma.
+   - En son production’a çıkan versiyonda sayfanın ve dokümantasyonun eksiksiz olduğundan emin ol.
+
+---
+
+**Not:**  
+Bu talimatlar ve markdown şablonları, landing page’deki “Development History & Production-Ready Steps” sayfasının ve tüm SDLC dokümantasyonunun her zaman güncel ve yüksek kaliteli olmasını sağlayacaktır.
+````
