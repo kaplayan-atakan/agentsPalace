@@ -162,8 +162,7 @@ export default function ModuleGallery() {
 
         {/* Modules Grid */}
         <div className="grid lg:grid-cols-2 gap-8 mb-20">
-          {modules.map((module, index) => (
-            <motion.div
+          {modules.map((module, index) => (            <motion.div
               key={module.id}
               initial={{ opacity: 0, y: 50 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -172,7 +171,8 @@ export default function ModuleGallery() {
               whileHover={{ scale: 1.02, y: -5 }}
               className="group relative"
             >
-              <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:border-white/30 transition-all duration-500 group-hover:shadow-glow">
+              <Link href={`/modules/${module.id}`} className="block cursor-pointer">
+                <div className="bg-black/50 backdrop-blur-sm border border-white/10 rounded-2xl p-8 h-full hover:border-white/30 transition-all duration-500 group-hover:shadow-glow">
                 {/* Header */}
                 <div className="flex items-start justify-between mb-6">                  <div className="flex items-center gap-4">                    <div className="w-16 h-16 rounded-xl flex items-center justify-center group-hover:scale-110 transition-transform duration-300 bg-gradient-to-br from-white/10 to-white/5 border-2 border-white/20">
                       <module.icon 
@@ -212,20 +212,19 @@ export default function ModuleGallery() {
                     >                      <div className={`w-2 h-2 rounded-full ${module.className.replace('text-', 'bg-')}`}></div>
                       <span className="text-sm text-gray-300">{feature}</span>
                     </motion.div>
-                  ))}
-                </div>
+                  ))}                </div>
 
-                {/* Action Button */}                <Link href={`/modules/${module.id}`}>
-                  <motion.div
-                    whileHover={{ x: 5 }}
-                    className={`flex items-center gap-2 text-sm font-semibold cursor-pointer ${module.className}`}
-                  >
-                    <span>Detayları Keşfet</span>
-                    <ArrowRight className="w-4 h-4" />
-                  </motion.div>
-                </Link>{/* Hover Background Effect */}
+                {/* Action Button */}                
+                <motion.div
+                  whileHover={{ x: 5 }}
+                  className={`flex items-center gap-2 text-sm font-semibold cursor-pointer ${module.className}`}
+                >
+                  <span>Detayları Keşfet</span>
+                  <ArrowRight className="w-4 h-4" />
+                </motion.div>{/* Hover Background Effect */}
                 <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-5 transition-opacity duration-500 bg-gradient-to-br from-current to-transparent"></div>
               </div>
+              </Link>
             </motion.div>
           ))}
         </div>
